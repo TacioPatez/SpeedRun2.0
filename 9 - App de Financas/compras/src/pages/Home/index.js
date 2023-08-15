@@ -48,9 +48,9 @@ export default function Home(){
                 <TouchableOpacity 
                     style={styles.carButton} 
                     onPress={() => navigation.navigate("Cart")}>
-                    <View style={styles.dot}>
+                    {cart?.length > 0 && (<View style={styles.dot}>
                         <Text style={styles.dotText}>{cart?.length}</Text>
-                    </View>
+                     </View>)}
                     <Icon name="shopping-cart" size={40} color="#000" />
                 </TouchableOpacity>
             </View>
